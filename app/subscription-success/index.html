@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Success - RushRush.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    orbitron: ['Orbitron', 'sans-serif'],
+                },
+                colors: {
+                    primary: {
+                        "50": "#f3f1ff",
+                        "100": "#ebe5ff",
+                        "200": "#d9ceff",
+                        "300": "#bea6ff",
+                        "400": "#9d71ff",
+                        "500": "#843dff",
+                        "600": "#7916ff",
+                        "700": "#6b04fd",
+                        "800": "#5a03d5",
+                        "900": "#4b05ad",
+                        "950": "#2c0076"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #9d8cff, #b9a0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease infinite;
+        }
+    </style>
+</head>
+          
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
+
+ 
+<main class="flex-grow flex items-center justify-center">
+  <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-md w-full">
+    <img src="https://rushrush-landing.b-cdn.net/assets/success.jpg" alt="Upgrade Image" class="w-full h-80 object-cover">
+    
+    <div class="p-6 text-center">
+      <h1 class="text-4xl font-bold mb-4">Subscription Successful!</h1>
+      <p class="text-xl mb-8">Thank you for choosing RushRush.ai. Your hustle starts now!</p>
+      <p class="text-lg mb-4">Redirecting you in <span id="countdown">5</span> seconds...</p>
+      <button id="redirectButton" class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
+        Go to Dashboard
+      </button>
+    </div>
+  </div>
+</main>
+
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        const redirectButton = document.getElementById('redirectButton');
+
+        function updateCountdown() {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                redirect();
+            } else {
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+        function redirect() {
+            window.location.href = 'https://app.rushrush.ai/';
+        }
+
+        redirectButton.addEventListener('click', redirect);
+
+        setTimeout(updateCountdown, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RushRush.ai - AI Web App Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+tailwind.config = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                orbitron: ['Orbitron', 'sans-serif'],
+            },
+            colors: {
+                primary: {
+                    "50": "#f3f1ff",
+                    "100": "#ebe5ff",
+                    "200": "#d9ceff",
+                    "300": "#bea6ff",
+                    "400": "#9d71ff",
+                    "500": "#843dff",
+                    "600": "#7916ff",
+                    "700": "#6b04fd",
+                    "800": "#5a03d5",
+                    "900": "#4b05ad",
+                    "950": "#2c0076"
+                }
+            }
+        }
+    }
+}
+    </script>
+    
+    <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .logo {
+            transform: skew(-10deg);
+            letter-spacing: 0.05em;
+            font-family: 'Orbitron', sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: gradientShift 5s ease infinite;
+        }
+        .rush-text {
+            display: inline-block;
+            background: linear-gradient(to right, #9d8cff, #b9a0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 
+                0 2px 4px rgba(157, 140, 255, 0.3),
+                0 4px 8px rgba(157, 140, 255, 0.2);
+            padding-right: 0.1em;
+            margin-right: 0.05em;
+        }
+        .ai-builder {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: linear-gradient(to right, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 
+                0 1px 2px rgba(255, 255, 255, 0.2),
+                0 2px 4px rgba(255, 255, 255, 0.1);
+            padding-right: 0.1em;
+            margin-right: 0.05em;
+            margin-left: 0.5em;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        .rush-text:hover {
+            transform: scale(1.05) translateY(-2px);
+            text-shadow: 
+                0 4px 8px rgba(157, 140, 255, 0.4),
+                0 8px 16px rgba(157, 140, 255, 0.3);
+        }
+
+.toggle-checkbox:checked {
+        right: 0;
+        border-color: #3B82F6; /* Primary blue color */
+    }
+    .toggle-checkbox:checked + .toggle-label {
+        background-color: #3B82F6; /* Primary blue color */
+    }
+    </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">    
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    
+    <header class="py-6 px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between">
+            <div class="logo text-2xl md:text-3xl">
+                <span class="rush-text">Rush</span><span class="rush-text">Rush</span><span class="ai-builder">AI</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-white transition-colors" data-scroll>Features</a>
+                <a href="#showcase" class="text-gray-300 hover:text-white transition-colors" data-scroll>Showcase</a>
+                <a href="#pricing" class="text-gray-300 hover:text-white transition-colors" data-scroll>Pricing</a>
+                <a href="https://discord.com/invite/sw7pbyV2" target="_blank" class="text-gray-300 hover:text-white transition-colors">Discord</a>
+            </div>
+        <a href="https://app.rushrush.ai" class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-full transition-colors">
+            Login
+        </a>
+        </nav>
+    </header>
+<section>
+    <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+        <div class="text-center">
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                <span class="block">Build Web Apps from text prompts</span>
+                <span class="block text-primary-400">Instantly</span>
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Type in what you want, and Rushrush will build it for you in less than 30 seconds. Start building your digital empire today. No technical skills required!
+            </p>
+            <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                <div class="rounded-md shadow mb-20">
+                    <a href="https://app.rushrush.ai" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 md:py-4 md:text-lg md:px-10 transition-colors">
+                        Get Started for Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+<div class="max-w-5xl mx-auto">
+    <div class="relative rounded-lg shadow-2xl overflow-hidden">
+        <img src="https://rushrush-landing.b-cdn.net/assets/Screenshot%202024-07-06%20at%2023.53.47.jpg" alt="RushRush Editor Preview" class="w-full h-auto rounded-lg">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-30"></div>
+    </div>
+    <p class="text-center text-gray-300 mt-4">Experience the power of AI-assisted web development</p>
+</div>
+<section id="features" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+        <div class="flex flex-wrap justify-center gap-6" id="featuresList">
+            <!-- Feature chips will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+<section id="showcase" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Showcase</h2>
+        <div id="showcaseContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+
+            <!-- Pricing  -->
+
+<section id="pricing" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Choose Your Hustle</h2>
+        <div class="flex justify-center items-center mb-8">
+            <span id="monthlyOption" class="mr-3 text-lg cursor-pointer">Monthly</span>
+            <div class="relative inline-block w-12 h-6 transition-colors duration-200 ease-in-out rounded-full cursor-pointer">
+                <input type="checkbox" id="pricingToggle" class="absolute w-6 h-6 transition-transform duration-200 ease-in-out transform bg-white border-4 rounded-full appearance-none cursor-pointer peer border-gray-300 checked:border-primary-600 checked:translate-x-6"/>
+                <label for="pricingToggle" class="block w-full h-full bg-gray-300 rounded-full peer-checked:bg-primary-600"></label>
+            </div>
+            <span id="annualOption" class="ml-3 text-lg cursor-pointer">Annual <span class="text-primary-400">(Save 16%)</span></span>
+        </div>
+        <div id="pricingContainer" class="flex flex-wrap justify-center -mx-4">
+            <!-- Pricing cards will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+</section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let plans = [];
+    const pricingContainer = document.getElementById('pricingContainer');
+    const pricingToggle = document.getElementById('pricingToggle');
+    const monthlyOption = document.getElementById('monthlyOption');
+    const annualOption = document.getElementById('annualOption');
+
+    fetch('https://xatr-zu7c-us3r.n7d.xano.io/api:pYf__RJh/plans')
+        .then(response => response.json())
+        .then(data => {
+            plans = data.sort((a, b) => a.order - b.order);
+            renderPricingCards();
+        })
+        .catch(error => console.error('Error fetching pricing data:', error));
+
+    function renderPricingCards() {
+        pricingContainer.innerHTML = '';
+        plans.forEach(plan => {
+            const card = createPricingCard(plan);
+            pricingContainer.appendChild(card);
+        });
+    }
+
+    function createPricingCard(plan) {
+        const card = document.createElement('div');
+        card.className = 'w-full md:w-1/3 px-4 mb-8';
+        
+        const monthlyPrice = plan.prices.find(price => price.type === 'monthly')?.cost || 0;
+        const annualPrice = plan.prices.find(price => price.type === 'annual')?.cost || 0;
+        const monthlyPriceDisplay = monthlyPrice === 0 ? 'Free' : `$${monthlyPrice}`;
+        const annualPriceDisplay = annualPrice === 0 ? 'Free' : `$${Math.floor(annualPrice / 12)}`;
+
+        card.innerHTML = `
+            <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden ${plan.name === 'Pro' ? 'border-2 border-primary-500' : ''}">
+                <div class="w-full aspect-square bg-gray-600">
+                    <img src="${plan.cover_image_url}" alt="${plan.nickname}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-4">${plan.nickname}</h3>
+                    <p class="text-4xl font-bold mb-6">
+                        <span class="price-amount">${monthlyPriceDisplay}</span>
+                        <span class="text-xl font-normal">${monthlyPrice === 0 ? '' : '/mo'}</span>
+                    </p>
+                    <ul class="mb-6 text-gray-300">
+                        ${plan.features.map(feature => `<li class="mb-2">${feature}</li>`).join('')}
+                    </ul>
+                    <a href="https://app.rushrush.ai?plan=${plan.name.toLowerCase()}" class="block text-center bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
+                        ${plan.name === 'Free' ? 'Get Started for FREE' : 'Get started for FREE'}
+                    </a>
+                </div>
+            </div>
+        `;
+
+        const priceElement = card.querySelector('.price-amount');
+        const priceUnitElement = priceElement.nextElementSibling;
+
+        function updatePrice(isAnnual) {
+            if (isAnnual) {
+                priceElement.textContent = annualPriceDisplay;
+                priceUnitElement.textContent = annualPrice === 0 ? '' : '/mo';
+            } else {
+                priceElement.textContent = monthlyPriceDisplay;
+                priceUnitElement.textContent = monthlyPrice === 0 ? '' : '/mo';
+            }
+        }
+
+        pricingToggle.addEventListener('change', function() {
+            updatePrice(this.checked);
+        });
+
+        return card;
+    }
+
+    function updatePricingDisplay(isAnnual) {
+        monthlyOption.classList.toggle('text-primary-600 font-bold', !isAnnual);
+        annualOption.classList.toggle('text-primary-600 font-bold', isAnnual);
+        pricingToggle.checked = isAnnual;
+        document.querySelectorAll('.price-amount').forEach((element, index) => {
+            const plan = plans[index];
+            const price = isAnnual 
+                ? plan.prices.find(p => p.type === 'annual')?.cost / 12 || 0
+                : plan.prices.find(p => p.type === 'monthly')?.cost || 0;
+            element.textContent = price === 0 ? 'Free' : `$${Math.floor(price)}`;
+            element.nextElementSibling.textContent = price === 0 ? '' : '/mo';
+        });
+    }
+
+    pricingToggle.addEventListener('change', function() {
+        updatePricingDisplay(this.checked);
+    });
+
+    monthlyOption.addEventListener('click', function() {
+        updatePricingDisplay(false);
+    });
+
+    annualOption.addEventListener('click', function() {
+        updatePricingDisplay(true);
+    });
+});
+</script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://xatr-zu7c-us3r.n7d.xano.io/api:pYf__RJh/showcase')
+        .then(response => response.json())
+        .then(data => {
+            const showcaseContainer = document.getElementById('showcaseContainer');
+            data.forEach(item => {
+                const card = createShowcaseCard(item);
+                showcaseContainer.appendChild(card);
+            });
+        })
+        .catch(error => console.error('Error fetching showcase data:', error));
+});
+
+function createShowcaseCard(item) {
+    const card = document.createElement('div');
+    card.className = 'bg-gray-800 rounded-lg shadow-lg overflow-hidden';
+    card.innerHTML = `
+        <div class="w-full pt-[56.25%] relative overflow-hidden">
+            <img src="${item.thumbnail_link}" alt="${item.name}" class="absolute top-0 left-0 w-full h-full object-cover object-top">
+        </div>
+        <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">${item.name}</h3>
+            <a href="${item.link}" target="_blank" class="block text-center bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-full transition-colors mt-4">View Project</a>
+        </div>
+    `;
+    return card;
+}
+
+        const features = [
+        "AI-Generated Pages",
+        "Code Export",
+        "Lightning Fast Hosting and CDN",
+        "Mobile Responsive pages",
+        "Direct Code Editing",
+        "Real-time Previewer",
+        "Custom Domains",
+        "Share your project",
+        "Edit History",
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const featuresList = document.getElementById('featuresList');
+        features.forEach(feature => {
+            const chip = document.createElement('div');
+            chip.className = 'bg-gray-800 text-white px-8 py-2 rounded-full text-lg font-medium hover:bg-primary-600 transition-colors duration-300';
+            chip.textContent = feature;
+            featuresList.appendChild(chip);
+        });
+    });
+
+      document.addEventListener("DOMContentLoaded", function() {
+    var scrollLinks = document.querySelectorAll('[data-scroll]');
+
+    scrollLinks.forEach(function(link) {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        var targetId = this.getAttribute("href");
+        var targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          var offsetTop = targetElement.offsetTop;
+
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
+</script>
+    <script src="cookieConsent.js"></script>
+</body>
+</html>

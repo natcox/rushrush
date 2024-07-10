@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.logo-container {
+    padding: 0.25em 0.5em;
+}
+
+.logo {
+    transform: skew(-10deg);
+    letter-spacing: 0.05em;
+    font-family: 'Orbitron', sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: gradientShift 5s ease infinite;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 1.875rem;
+    }
+}
+
+.rush-text:hover {
+    transform: scale(1.05) translateY(-2px);
+    text-shadow: 
+        0 4px 8px rgba(157, 140, 255, 0.4),
+        0 8px 16px rgba(157, 140, 255, 0.3);
+}
+
+.rush-text {
+    display: inline-block;
+    background: linear-gradient(to right, #9d8cff, #b9a0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        0 2px 4px rgba(157, 140, 255, 0.3),
+        0 4px 8px rgba(157, 140, 255, 0.2);
+    padding-right: 0.1em;
+    margin-right: 0.05em;
+}
+
+.ai-builder {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        0 1px 2px rgba(255, 255, 255, 0.2),
+        0 2px 4px rgba(255, 255, 255, 0.1);
+    padding-right: 0.1em;
+    margin-right: 0.05em;
+    margin-left: 0.5em;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.auth-container {
+    @apply max-w-md mx-auto;
+}
+
+.auth-form {
+    @apply bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700;
+}
+
+.auth-title {
+    @apply text-3xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
+}
+
+.form-group {
+    @apply space-y-6;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-400 mb-2;
+}
+
+.form-input {
+    @apply w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.btn-primary {
+    @apply w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg;
+}
+
+.btn-logout {
+    @apply px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-md hover:from-purple-600 hover:to-pink-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg font-semibold;
+}
+
+.main-content {
+    @apply space-y-8;
+}
+
+.input-prompt {
+    @apply flex-grow px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.btn-generate {
+  padding-left: 1.5rem; /* Tailwind class: px-6 */
+  padding-right: 1.5rem; /* Tailwind class: px-6 */
+  padding-top: 0.75rem; /* Tailwind class: py-3 */
+  padding-bottom: 0.75rem; /* Tailwind class: py-3 */
+  background-image: linear-gradient(to right, #7c3aed, #2563eb); /* Tailwind class: bg-gradient-to-r from-purple-500 to-blue-600 */
+  color: white; /* Tailwind class: text-white */
+  border-radius: 0.5rem; /* Tailwind class: rounded-lg */
+  font-weight: 600; /* Tailwind class: font-semibold */
+  transition: all 0.3s ease-in-out; /* Tailwind class: transition-all duration-300 ease-in-out */
+  transform: translateY(0); /* Initial transform */
+}
+.btn-generate:hover {
+  background-image: linear-gradient(to right, #2563eb, #7c3aed); /* Tailwind class: hover:from-blue-600 hover:to-purple-700 */
+  transform: translateY(-0.25rem); /* Tailwind class: hover:-translate-y-1 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Tailwind class: hover:shadow-lg */
+}
+
+.btn-preview {
+    @apply px-6 py-3 bg-gradient-to-r from-blue-800 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg font-semibold;
+}
+
+.editor-container {
+    @apply bg-gray-800 rounded-xl shadow-2xl border border-gray-700 overflow-hidden;
+}
+
+.editor-title {
+    @apply p-4 bg-gray-900;
+}
+
+.editor-title-text {
+    @apply text-xl font-semibold text-gray-100;
+}
+
+.editor-content {
+    @apply w-full h-[calc(100vh-16rem)];
+}
+
+        .settings-link i {
+            font-size: 24px;
+            margin-right: 8px;
+            color: gray;
+        }
+        .settings-link:hover i {
+            color: blue; /* Change this color to the hover color you prefer */
+        }
+
+@keyframes gradientShift {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(15deg);
+    }
+}
+
+@keyframes neonFlash {
+    0%, 45%, 50%, 55%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+    48%, 52% {
+        opacity: 0.5;
+        filter: brightness(0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    #mobileMenuBtn {
+        display: block !important;
+    }
+
+    #userInfo {
+        display: none !important;
+    }
+
+    body.menu-open #userInfo {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(31, 41, 55, 0.95);
+        padding: 2rem;
+        z-index: 50;
+        overflow-y: auto;
+    }
+
+    #closeMenuBtn {
+        display: none;
+    }
+
+    body.menu-open #closeMenuBtn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .editor-preview-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .preview-container {
+        order: -1;
+    }
+}
+
+
+
+@media (min-width: 769px) {
+    #mobileMenuBtn, #closeMenuBtn {
+        display: none !important;
+    }
+
+    #userInfo {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 640px) {
+    .generate-button-container {
+        display: flex;
+    }
+    #generateButton {
+        flex-grow: 1;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    #generateDropdownToggle {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@media (max-width: 639px) {
+    #generateButton, #generateDropdownToggle {
+        height: 3rem; /* Adjust this value as needed */
+    }
+}
+
+#generateButton, #generateDropdownToggle {
+    height: 2.75rem; /* Adjust this value for larger screens if needed */
+}
+
+#generateButton {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 120px; /* Adjust this value as needed to prevent wrapping */
+}
+
+#generateDropdownToggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#generateButton, #generateDropdownToggle, #prompt {
+    height: 3rem; /* Adjust this value if needed */
+}
+
+#generateMenu a {
+    transition: background-color 0.3s ease;
+}
+
+#generateMenu a:hover {
+    background-color: #f3f4f6; /* Light gray background on hover */
+}
+
+#generateMenu a:active {
+    background-color: #e5e7eb; /* Slightly darker gray for click feedback */
+}
